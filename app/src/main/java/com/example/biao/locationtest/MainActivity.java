@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     List<String> list;
     TextView textView;
     LocationListener locationListener = new LocationListener() {
-
         @Override
         //状态改变的回调方法
         public void onStatusChanged(String arg0, int arg1, Bundle arg2) {
@@ -90,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
         location = locationManager.getLastKnownLocation(provider);
         if (location != null) {
             //获取当前位置，这里只用到了经纬度
-            String string = ",经度：" + location.getLongitude() + " 纬度：" + location.getLatitude();
+            String string = "经度：" + location.getLongitude() + " ,纬度：" + location.getLatitude();
             textView.append(string + "\n");
         }
 
